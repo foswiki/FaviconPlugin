@@ -1,0 +1,84 @@
+%META:TOPICINFO{author="micha" comment="reprev" date="1706542816" format="1.1" reprev="4" version="4"}%
+---+!! %TOPIC%
+%FORMFIELD{"Description"}%
+
+%TOC%
+
+---++ Description
+
+While Foswiki itself allows you set a new favicon url per page using the
+=%FAVICON= preference setting, this plugin adds extra flexibility, for instance
+by adding a badge counter to an existing favicon, or replace it with an image
+on the page etc.
+
+For more information see https://github.com/ejci/favico.js
+
+---++ Examples
+
+Add a numeric badge counter: 
+
+<verbatim>
+%FAV{"123"}%
+</verbatim>
+
+Or using the =FavIcon= jQuery module directly. Note that you'll then need to add a
+
+<verbatim>
+%JQREQUIRE{"FavIcon"}% 
+</verbatim>
+
+to the examples. Such as:
+
+<verbatim>
+There are <span class='jqFavicon foswikiAlert'>12</span> unread messages in your inbox.
+</verbatim>
+
+Use anHTML img as a favicon:
+
+<verbatim>
+<img src='%PUBURLPATH%/Web/Topic/image.jpeg' class='jqFavico' ... />
+</verbatim>
+
+---++ Syntax
+
+The =%<nop>FAV{...}= macro has got the following parameters:
+
+| *Name* | *HTML5 Data* | *Description* | *Default* |
+| "..." or text | data-text | text to be displayed | |
+| bg_color | data-bg-color | background color as rgb hex code | #d00 |
+| text_color | data-text-color | font-color | #fff |
+| type | data-type | shape of badge: circle or rectangle  | circle |
+| position | data-position | position where to display a badge relative to the original favicon: up, down, left, upleft | down |
+| animation | data-animation | animation type, one of: none, fade, pop, popFade, slide | slide |
+| font_family | data-font-family | font of a badge | sans-serif |
+| font_style | data-font-style | weight of font | bold  |
+
+---++ <nop>JavaScript API
+
+The plugin allocates one =foswiki.faviconManager= that can be used to control the favicon. Methods are:
+
+   * foswiki.faviconManager.setText(text [, opts]): create a text badge
+   * foswiki.faviconManager.setImage(img [, opts]): create an image badge
+   * foswiki.faviconManage.config(opts): configure the default options
+
+---++ Installation Instructions
+%$INSTALL_INSTRUCTIONS%
+
+---++ Dependencies
+%$DEPENDENCIES%
+
+---++ Change History
+
+%TABLE{columnwidths="7em" tablewidth="100%"}%
+|  26 Jan 2024 | initial release |
+
+%META:FORM{name="PackageForm"}%
+%META:FIELD{name="Author" title="Author" value="Michael Daum"}%
+%META:FIELD{name="Version" title="Version" value="%25$VERSION%25"}%
+%META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
+%META:FIELD{name="Description" title="Description" value="%25$SHORTDESCRIPTION%25"}%
+%META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/%25$ROOTMODULE%25"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2021-2024, Michael Daum, All Rights Reserved"}%
+%META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
+%META:FIELD{name="Home" title="Home" value="http://foswiki.org/Extensions/%25$ROOTMODULE%25"}%
+%META:FIELD{name="Support" title="Support" value="http://foswiki.org/Support/%25$ROOTMODULE%25"}%

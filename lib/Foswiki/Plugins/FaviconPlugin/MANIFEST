@@ -1,0 +1,12 @@
+!noci
+data/System/FaviconPlugin.txt 0644
+lib/Foswiki/Plugins/FaviconPlugin/Core.pm 0644
+lib/Foswiki/Plugins/FaviconPlugin/DEPENDENCIES 0644
+lib/Foswiki/Plugins/FaviconPlugin/JQuery.pm 0644
+lib/Foswiki/Plugins/FaviconPlugin.pm 0644
+pub/System/FaviconPlugin/build/pkg.js 0644
+pub/System/FaviconPlugin/build/pkg.js.gz 0644
+pub/System/FaviconPlugin/build/pkg.uncompressed.js 0644
+pub/System/FaviconPlugin/lib/favico.js 0644
+pub/System/FaviconPlugin/Makefile 0644
+pub/System/FaviconPlugin/src/FaviconManager.js 0644
