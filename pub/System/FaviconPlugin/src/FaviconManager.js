@@ -1,5 +1,5 @@
 /*
- * Favicon Manager 1.0
+ * Favicon Manager 1.1
  *
  * Copyright (c) 2021-2024 Michael Daum http://michaeldaumconsulting.com
  *
@@ -23,16 +23,23 @@
     var self = this;
 
     self.opts = $.extend({}, defaults, opts);
+    self.delegate = new Favico(self.opts);
   }
 
   FaviconManager.prototype.setText = function(text, opts) {
     var self = this;
-    return new Favico($.extend({}, self.opts, opts)).badge(text);
+    return self.delegate.badge(text, $.extend({}, self.opts, opts));
   };
 
-  FaviconManager.prototype.setImage = function(param) {
+  FaviconManager.prototype.setImage = function(opts) {
     var self = this;
-    return new Favico().image(img);
+    return self.delegate.image(img, $.extend({}, self.opts, opts));
+  };
+
+  FaviconManager.prototype.reset = function() {
+    var self = this;
+
+    return self.delegate.reset();
   };
 
   FaviconManager.prototype.config = function(opts) {

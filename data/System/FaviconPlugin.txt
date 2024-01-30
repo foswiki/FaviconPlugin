@@ -60,6 +60,7 @@ The plugin allocates one =foswiki.faviconManager= that can be used to control th
    * foswiki.faviconManager.setText(text [, opts]): create a text badge
    * foswiki.faviconManager.setImage(img [, opts]): create an image badge
    * foswiki.faviconManage.config(opts): configure the default options
+   * foswiki.faviconManage.reset(): clear the favicon overlay
 
 ---++ Installation Instructions
 %$INSTALL_INSTRUCTIONS%
@@ -70,6 +71,7 @@ The plugin allocates one =foswiki.faviconManager= that can be used to control th
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
+|  30 Jan 2024 | rework favicon manager; added =reset()= api to clear a favicon overlay |
 |  26 Jan 2024 | initial release |
 
 %META:FORM{name="PackageForm"}%

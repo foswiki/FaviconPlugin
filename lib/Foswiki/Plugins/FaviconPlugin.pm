@@ -21,7 +21,7 @@ use warnings;
 use Foswiki::Func ();
 use Foswiki::Plugins::JQueryPlugin ();
 
-our $VERSION = '1.00';
+our $VERSION = '1.10';
 our $RELEASE = '%$RELEASE%';
 our $SHORTDESCRIPTION = "Display a badge, image or video in a browser tab's favicon";
 our $LICENSECODE = '%$LICENSECODE%';
