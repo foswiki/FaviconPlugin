@@ -2,6 +2,7 @@
 data/System/FaviconPlugin.txt 0644
 lib/Foswiki/Plugins/FaviconPlugin/Core.pm 0644
 lib/Foswiki/Plugins/FaviconPlugin/DEPENDENCIES 0644
+lib/Foswiki/Plugins/FaviconPlugin/MANIFEST 0644
 lib/Foswiki/Plugins/FaviconPlugin/JQuery.pm 0644
 lib/Foswiki/Plugins/FaviconPlugin.pm 0644
 pub/System/FaviconPlugin/build/pkg.js 0644

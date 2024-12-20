@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1706542816" format="1.1" reprev="4" version="4"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1734687146" format="1.1"  version="1"}%
 ---+!! %TOPIC%
 %FORMFIELD{"Description"}%
 
@@ -71,6 +71,7 @@ The plugin allocates one =foswiki.faviconManager= that can be used to control th
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
+|  20 Dec 2024 | properly deconstruct the plugin at the end of a session |
 |  30 Jan 2024 | rework favicon manager; added =reset()= api to clear a favicon overlay |
 |  26 Jan 2024 | initial release |
 

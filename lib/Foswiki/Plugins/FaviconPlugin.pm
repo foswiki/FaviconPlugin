@@ -46,6 +46,7 @@ sub getCore {
 
 
 sub finishPlugin {
+  $core->finish() if defined $core;
   undef $core;
 }
 
